@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -28,11 +31,130 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+  /* background-color: red; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1.3rem;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.form__item--flex-row {
+  flex-direction: row;
+}
+
+.form__input {
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.6rem;
+  outline: none;
+}
+
+.form__color-box {
+  border-radius: 0.3rem;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+.form__color-box--gray {
+  background-color: #5e586d;
+}
+.form__color-box--blue {
+  background-color: #27b9ff;
+}
+.form__color-box--red {
+  background-color: #ff4631;
+}
+.form__color-box--pink {
+  background-color: #e74fff;
+}
+
+.form__radio {
+  display: none;
+}
+
+.form__radio:checked + .form__color-box {
+  border: 1px solid white;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  transition: background-color ease-in-out 0.4s;
+}
+
+.button--red {
+  border: 1px solid #ff4631;
+  color: #ff4631;
+}
+
+.button--blue {
+  border: 1px solid #27b9ff;
+  color: #27b9ff;
+}
+
+.button--white {
+  border: 1px solid #e7e7e7;
+  color: #e7e7e7;
+}
+
+.button--white:hover {
+  background-color: #e7e7e7;
+  color: #282c34;
+}
+
+.tasks {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.task {
+  align-items: center;
+  border-radius: 0.4rem;
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 0.3rem 0.8rem;
+  width: 100%;
+}
+
+.task__text {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.3rem;
+}
+
+/* .task__checkbox:checked + .task__text {
+  text-decoration: underline;
+} */
+
+.task__text--complete {
+  text-decoration: line-through;
+}
+
+.task__button {
+  margin-left: auto;
+}
+
+.task--bg-gray {
+  background-color: #5e586d;
+}
+.task--bg-blue {
+  background-color: #27b9ff;
+}
+.task--bg-red {
+  background-color: #ff4631;
+}
+.task--bg-pink {
+  background-color: #e74fff;
 }
